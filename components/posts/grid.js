@@ -6,7 +6,7 @@ function Grid(props) {
   return (
     <ul className={classes.grid}>
       {posts.map((post) => (
-        <Item />
+        <Item key={post.slug} post={post} />
       ))}
     </ul>
   );
