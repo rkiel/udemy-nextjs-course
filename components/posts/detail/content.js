@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import Header from "./header";
 import classes from "./content.module.css";
 
@@ -15,7 +16,7 @@ function Content() {
   return (
     <article className={classes.content}>
       <Header title={post.title} image={imagePath} />
-      {post.content}
+      <ReactMarkdown>{post.content}</ReactMarkdown>
     </article>
   );
 }
